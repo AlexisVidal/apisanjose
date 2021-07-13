@@ -5,6 +5,9 @@ import salidaRoutes from './routes/salida.routes'
 import volcadoRoutes from './routes/volcado.router'
 import paletaRoutes from './routes/paleta.router'
 import ingresoTunelRoutes from './routes/ingresotunel.router'
+import parteTransformacionRoutes from './routes/partetransformacion.router'
+import prePackinglistRoutes from './routes/prepackinglist.router'
+import packingListRoutes from './routes/packinglist.router'
 import morgan from "morgan";
 
 import config from "./config";
@@ -25,4 +28,7 @@ app.use("/api/salidas", salidaRoutes)
 app.use("/api/volcados", volcadoRoutes)
 app.use("/api/paletas", paletaRoutes)
 app.use("/api/ingresostunel", ingresoTunelRoutes)
+app.use("/api/partestransformacion", parteTransformacionRoutes)
+app.use("/api/prepackinglist", prePackinglistRoutes)
+app.use("/api/packinglist", packingListRoutes)
 export default app;
