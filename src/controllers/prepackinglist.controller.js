@@ -1,6 +1,24 @@
 import { getConnection, querys, sql } from '../database'
-
+var jwt = require('jsonwebtoken')
+import { config } from 'dotenv'
+config();
 export const getPrePackingList = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     try {
         const pool = await getConnection();
         const result = await pool.request().query(querys.getPrePackingList);
@@ -11,6 +29,22 @@ export const getPrePackingList = async(req, res) => {
     }
 };
 export const getPrePackingListByPeriodo = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     let PERIODO = req.query.PERIODO;
     if (PERIODO == null) {
         return res.status(400).json({ msg: "Bad Request. Please fill all fields" });
@@ -30,6 +64,22 @@ export const getPrePackingListByPeriodo = async(req, res) => {
     }
 };
 export const getDetallePrePackingList = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     try {
         const pool = await getConnection();
         const result = await pool.request().query(querys.getDetallePrePackingList);
@@ -40,6 +90,22 @@ export const getDetallePrePackingList = async(req, res) => {
     }
 };
 export const getDetallePrePackingListByFk = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     let IDPACKINGLIST = req.query.IDPACKINGLIST;
     if (IDPACKINGLIST == null) {
         return res.status(400).json({ msg: "Bad Request. Please fill all fields" });
@@ -59,6 +125,22 @@ export const getDetallePrePackingListByFk = async(req, res) => {
     }
 };
 export const getDDetallePrePackingList = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     try {
         const pool = await getConnection();
         const result = await pool.request().query(querys.getDDetallePrePackingList);
@@ -69,6 +151,22 @@ export const getDDetallePrePackingList = async(req, res) => {
     }
 };
 export const getDDetallePrePackingListByFk = async(req, res) => {
+    let token = req.query.token;
+    if (!token) {
+        res.status(401).send({
+            error: "Es necesario el token de autenticación"
+        })
+        return
+    }
+    token = token.replace('Bearer ', '')
+    jwt.verify(token, process.env.secret, function(err, user) {
+        if (err) {
+            res.status(401).send({
+                error: 'Token inválido'
+            })
+            return
+        }
+    })
     let IDPACKINGLIST = req.query.IDPACKINGLIST;
     if (IDPACKINGLIST == null) {
         return res.status(400).json({ msg: "Bad Request. Please fill all fields" });

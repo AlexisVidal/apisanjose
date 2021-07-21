@@ -9,11 +9,11 @@ import {
 } from '../controllers/volcado.controller'
 const router = Router();
 
-router.get('/volcado', getVolcados)
-router.post('/volcado', getVolcadosByPeriodo)
-router.get('/detalleVolcadoLinea', getDetalleVolcadosLinea)
-router.post('/detalleVolcadoLinea', getDetalleVolcadosLineaByFk)
-router.get('/detalleVolcadoConsumidor', getDetalleVolcadosConsumidor)
-router.post('/detalleVolcadoConsumidor', getDetalleVolcadosConsumidorByFk)
+router.post('/volcado', getVolcados)
+router.post('/volcadoPeriodo', getVolcadosByPeriodo)
+router.post('/detalleVolcadoLinea', getDetalleVolcadosLinea)
+router.post('/detalleVolcadoLineaID', getDetalleVolcadosLineaByFk)
+router.post('/detalleVolcadoConsumidor', getDetalleVolcadosConsumidor)
+router.post('/detalleVolcadoConsumidorID', getDetalleVolcadosConsumidorByFk)
 
 export default router

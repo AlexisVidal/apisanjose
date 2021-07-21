@@ -7,9 +7,9 @@ import {
 } from '../controllers/salida.controller'
 const router = Router();
 
-router.get('/salida', getSalidas)
-router.post('/salida', getSalidasByPeriodo)
-router.get('/detalleSalida', getDetalleSalidas)
-router.post('/detalleSalida', getDetalleSalidasByFk)
+router.post('/salida', getSalidas)
+router.post('/salidaPeriodo', getSalidasByPeriodo)
+router.post('/detalleSalida', getDetalleSalidas)
+router.post('/detalleSalidaID', getDetalleSalidasByFk)
 
 export default router

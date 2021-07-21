@@ -11,12 +11,12 @@ import {
 } from '../controllers/packinglist.controller'
 const router = Router();
 
-router.get('/packinglist', getPackingList)
-router.post('/packinglist', getPackingListByPeriodo)
-router.get('/detallePackinglist', getDetallePackingList)
-router.post('/detallePackinglist', getDetallePackingListByFk)
-router.get('/ddetallePackinglist', getDDetallePackingList)
-router.post('/ddetallePackinglist', getDDetallePackingListByFk)
-router.get('/ddetalleDistribucionPaleta', getDDistribucionPaletaContenedor)
-router.post('/ddetalleDistribucionPaleta', getDDistribucionPaletaContenedorByFk)
+router.post('/packinglist', getPackingList)
+router.post('/packinglistPeriodo', getPackingListByPeriodo)
+router.post('/detallePackinglist', getDetallePackingList)
+router.post('/detallePackinglistID', getDetallePackingListByFk)
+router.post('/ddetallePackinglist', getDDetallePackingList)
+router.post('/ddetallePackinglistID', getDDetallePackingListByFk)
+router.post('/ddetalleDistribucionPaleta', getDDistribucionPaletaContenedor)
+router.post('/ddetalleDistribucionPaletaID', getDDistribucionPaletaContenedorByFk)
 export default router

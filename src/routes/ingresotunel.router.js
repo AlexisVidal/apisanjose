@@ -8,8 +8,8 @@ import {
 const router = Router();
 
 router.get('/ingresoTunel', getIngresoTunel)
-router.post('/ingresoTunel', getIngresoTunelByPeriodo)
+router.post('/ingresoTunelPeriodo', getIngresoTunelByPeriodo)
 router.get('/detalleIngresoTunel', getDetalleIngresoTunel)
-router.post('/detalleIngresoTunel', getDetalleIngresoTunelByFk)
+router.post('/detalleIngresoTunelID', getDetalleIngresoTunelByFk)
 
 export default router

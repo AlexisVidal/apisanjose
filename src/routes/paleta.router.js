@@ -7,9 +7,9 @@ import {
 } from '../controllers/paleta.controller'
 const router = Router();
 
-router.get('/paleta', getRegistrosPaleta)
-router.post('/paleta', getRegistrosPaletaByPeriodo)
-router.get('/detallePaleta', getDetalleRegistrosPaleta)
-router.post('/detallePaleta', getDetalleRegistrosPaletaByFk)
+router.post('/paleta', getRegistrosPaleta)
+router.post('/paletaPeriodo', getRegistrosPaletaByPeriodo)
+router.post('/detallePaleta', getDetalleRegistrosPaleta)
+router.post('/detallePaletaID', getDetalleRegistrosPaletaByFk)
 
 export default router

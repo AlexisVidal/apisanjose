@@ -9,11 +9,11 @@ import {
 } from '../controllers/prepackinglist.controller'
 const router = Router();
 
-router.get('/prepackinglist', getPrePackingList)
-router.post('/prepackinglist', getPrePackingListByPeriodo)
-router.get('/detallePrepackinglist', getDetallePrePackingList)
-router.post('/detallePrepackinglist', getDetallePrePackingListByFk)
-router.get('/ddetallePrepackinglist', getDDetallePrePackingList)
-router.post('/ddetallePrepackinglist', getDDetallePrePackingListByFk)
+router.post('/prepackinglist', getPrePackingList)
+router.post('/prepackinglistPeriodo', getPrePackingListByPeriodo)
+router.post('/detallePrepackinglist', getDetallePrePackingList)
+router.post('/detallePrepackinglistID', getDetallePrePackingListByFk)
+router.post('/ddetallePrepackinglist', getDDetallePrePackingList)
+router.post('/ddetallePrepackinglistID', getDDetallePrePackingListByFk)
 
 export default router

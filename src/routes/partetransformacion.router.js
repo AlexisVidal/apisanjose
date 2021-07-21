@@ -11,8 +11,8 @@ import {
 } from '../controllers/partetransformacion.controller'
 const router = Router();
 
-router.get('/parteTransformacion', getParteTransformacion)
-router.post('/parteTransformacion', getParteTransformacionByPeriodo)
+router.post('/parteTransformacion', getParteTransformacion)
+router.post('/parteTransformacionPeriodo', getParteTransformacionByPeriodo)
 router.post('/detalleparteTransformacion', getDetalleParteTransformacionByFk)
 router.post('/ddetalleparteTransformacion', getDDetalleParteTransformacionByFk)
 router.post('/dddetalleparteTransformacion', getDDDetalleParteTransformacionByFk)
